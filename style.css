@@ -1,0 +1,310 @@
+/* =========================================
+STUDENT SHOP — DESIGN MODERNE
+========================================= */
+
+:root {
+–primary: #2563eb;
+–primary-dark: #1d4ed8;
+vertical-align: #eff6ff;
+–dark: #0f172a;
+–text: #475569;
+–muted: #94a3b8;
+–background: #f8fafc;
+–white: #ffffff;
+–border: #e2e8f0;
+–success: #16a34a;
+–radius: 18px;
+–shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* Réinitialisation */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: “Segoe UI”, Arial, sans-serif;
+background: var(–background);
+color: var(–dark);
+line-height: 1.6;
+}
+
+/* Liens */
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* En-tête */
+
+header {
+background: var(–white);
+border-bottom: 1px solid var(–border);
+padding: 18px 6%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+header h1 {
+color: var(–primary);
+font-size: 27px;
+font-weight: 800;
+letter-spacing: -1px;
+}
+
+header nav {
+display: flex;
+align-items: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+
+header nav a {
+color: var(–text);
+font-size: 14px;
+font-weight: 600;
+transition: color 0.2s ease;
+}
+
+header nav a:hover {
+color: var(–primary);
+}
+
+/* Contenu principal */
+
+main {
+width: min(1200px, 92%);
+margin: 35px auto;
+}
+
+/* Titres */
+
+h2 {
+font-size: clamp(24px, 4vw, 34px);
+margin-bottom: 22px;
+letter-spacing: -0.8px;
+}
+
+h3 {
+font-size: 18px;
+margin: 12px 0 8px;
+}
+
+/* Sections */
+
+section {
+margin-bottom: 45px;
+}
+
+/* Catalogue */
+
+.produits {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 25px;
+}
+
+/* Cartes des produits */
+
+.produit {
+background: var(–white);
+border: 1px solid var(–border);
+border-radius: var(–radius);
+padding: 22px;
+box-shadow: var(–shadow);
+display: flex;
+flex-direction: column;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.produit:hover {
+transform: translateY(-5px);
+box-shadow: 0 16px 35px rgba(37, 99, 235, 0.12);
+}
+
+.image-produit {
+min-height: 145px;
+border-radius: 14px;
+background: var(–primary-light);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 65px;
+margin-bottom: 15px;
+}
+
+.produit h3 {
+color: var(–dark);
+}
+
+.produit p {
+color: var(–text);
+font-size: 14px;
+margin-bottom: 12px;
+}
+
+.produit strong {
+color: var(–primary);
+font-size: 21px;
+margin-top: auto;
+margin-bottom: 15px;
+}
+
+/* Boutons */
+
+button,
+.btn {
+border: none;
+border-radius: 10px;
+padding: 12px 18px;
+background: var(–primary);
+color: var(–white);
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+background: var(–primary-dark);
+transform: translateY(-1px);
+}
+
+button:active {
+transform: scale(0.98);
+}
+
+/* Panier */
+
+.panier {
+background: var(–white);
+padding: 28px;
+border: 1px solid var(–border);
+border-radius: var(–radius);
+box-shadow: var(–shadow);
+}
+
+#liste-panier {
+list-style: none;
+margin: 15px 0;
+}
+
+#liste-panier li {
+padding: 12px 0;
+border-bottom: 1px solid var(–border);
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+#total {
+color: var(–primary);
+font-size: 23px;
+}
+
+/* Champs de formulaire */
+
+input,
+select,
+textarea {
+width: 100%;
+padding: 12px 14px;
+margin: 8px 0 15px;
+border: 1px solid var(–border);
+border-radius: 10px;
+background: var(–white);
+color: var(–dark);
+font-family: inherit;
+font-size: 15px;
+outline: none;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+border-color: var(–primary);
+box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Pied de page */
+
+footer {
+background: var(–dark);
+color: #cbd5e1;
+padding: 30px 6%;
+text-align: center;
+font-size: 14px;
+}
+
+footer a {
+color: var(–white);
+}
+
+/* Adaptation aux téléphones */
+
+@media (max-width: 600px) {
+header {
+padding: 15px 4%;
+flex-direction: column;
+align-items: flex-start;
+}
+
+header h1 {
+    font-size: 24px;
+}
+header nav {
+    gap: 15px;
+}
+main {
+    width: 92%;
+    margin: 25px auto;
+}
+.produits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+.produit {
+    padding: 12px;
+    border-radius: 14px;
+}
+.image-produit {
+    min-height: 105px;
+    font-size: 45px;
+}
+.produit h3 {
+    font-size: 15px;
+}
+.produit p {
+    font-size: 12px;
+}
+.produit strong {
+    font-size: 16px;
+}
+.produit button {
+    padding: 10px 8px;
+    font-size: 12px;
+}
+.panier {
+    padding: 18px;
+}
+
+}

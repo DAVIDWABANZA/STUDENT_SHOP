@@ -1,0 +1,9 @@
+.env
+config.php
+config/
+*.sql
+test_db.php
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Shop | Boutique en ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>STUDENT <span>SHOP</span></h1>
+        <p>Apprendre • S'équiper • Réussir</p>
+    </header>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#produits">Nos produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section class="hero">
+            <h2>Bienvenue chez Student Shop !</h2>
+            <p>Tout ce dont un étudiant a besoin, en un seul endroit.</p>
+            <a href="#produits" class="bouton">Découvrir nos produits</a>
+        </section>
+        <section id="produits">
+            <h2>Nos produits</h2>
+            <div class="produits">
+                <article class="produit">
+                    <div class="image-produit">💻</div>
+                    <h3>Ordinateur portable</h3>
+                    <p>Pour tes études et tes projets.</p>
+                    <strong>850 000 FC</strong>
+                    <button onclick="ajouterAuPanier('Ordinateur portable', 850000)">
+                        Ajouter au panier
+                    </button>
+                </article>
+                <article class="produit">
+                    <div class="image-produit">🎧</div>
+                    <h3>Écouteurs Bluetooth</h3>
+                    <p>Écoute ta musique partout.</p>
+                    <strong>85 000 FC</strong>
+                    <button onclick="ajouterAuPanier('Écouteurs Bluetooth', 85000)">
+                        Ajouter au panier
+                    </button>
+                </article>
+                <article class="produit">
+                    <div class="image-produit">🎒</div>
+                    <h3>Sac à dos</h3>
+                    <p>Pratique pour les cours.</p>
+                    <strong>65 000 FC</strong>
+                    <button onclick="ajouterAuPanier('Sac à dos', 65000)">
+                        Ajouter au panier
+                    </button>
+                </article>
+                <article class="produit">
+                    <div class="image-produit">📚</div>
+                    <h3>Fournitures scolaires</h3>
+                    <p>Les essentiels pour réussir.</p>
+                    <strong>25 000 FC</strong>
+                    <button onclick="ajouterAuPanier('Fournitures scolaires', 25000)">
+                        Ajouter au panier
+                    </button>
+                </article>
+            </div>
+        </section>
+        <section class="panier">
+            <h2>🛒 Mon panier</h2>
+            <ul id="liste-panier"></ul>
+            <p>Total : <strong id="total">0 FC</strong></p>
+        </section>
+    </main>
+    <footer id="contact">
+        <p>© 2026 Student Shop — Tous droits réservés.</p>
+        <p>Votre boutique pour les études et l'informatique.</p>
+    </footer>
+</body>
+</html>
